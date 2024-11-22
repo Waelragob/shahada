@@ -1,18 +1,16 @@
+import './App.css';
+import App_Home from './app/app';
+import { ThemeProvider } from './Conteex/ThemeContext';
+import { HashRouter as Router } from 'react-router-dom';
 
-
-import './App.css'
-import App_Home from './app/app'
-import { ThemeProvider } from './Conteex/ThemeContext'
 function App() {
- 
   return (
-    <> 
-    <ThemeProvider>
-    <App_Home/>
-    </ThemeProvider>
-    
-    </>
-  )
+    <Router>
+      <ThemeProvider>
+        <App_Home />
+      </ThemeProvider>
+    </Router>
+  );
 }
 
-export default App
+export default App;
